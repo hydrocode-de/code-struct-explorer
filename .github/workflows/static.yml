@@ -37,7 +37,8 @@ jobs:
         run: |
           npm i
           npm run build
-          touch .nojekyll
+          mkdir ./static
+          touch ./static/nojekyll
           cp index.html 404.html
       - name: Setup Pages
         uses: actions/configure-pages@v5
