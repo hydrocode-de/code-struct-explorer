@@ -39,8 +39,8 @@ jobs:
         run: |
           npm i
           npm run build
-          touch ./.nojekyll
-          cp index.html 404.html
+          touch dist/.nojekyll
+          cp dist/index.html dist/404.html
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
