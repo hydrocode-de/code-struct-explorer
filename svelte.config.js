@@ -5,6 +5,6 @@ export default {
   // for more information about preprocessors
   preprocess: vitePreprocess(),
   paths: {
-    base: process.argv.includes('dev') ? '' : process.env.BASE_PATH
+    base: process.argv.includes('dev') ? '' : '/code-struct-explorer'
   }
 }
