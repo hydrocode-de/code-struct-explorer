@@ -34,11 +34,12 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4.2.0
       - name: Build application
+        env:
+          BASE_PATH: '/${{ github.event.repository.name }}'
         run: |
           npm i
           npm run build
-          mkdir ./static
-          touch ./static/nojekyll
+          touch ./.nojekyll
           cp index.html 404.html
       - name: Setup Pages
         uses: actions/configure-pages@v5
