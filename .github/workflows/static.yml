@@ -38,7 +38,7 @@ jobs:
           BASE_PATH: '/${{ github.event.repository.name }}'
         run: |
           npm i
-          npm run build
+          npm run deploy
           touch dist/.nojekyll
           cp dist/index.html dist/404.html
       - name: Setup Pages
