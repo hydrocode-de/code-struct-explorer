@@ -63,12 +63,13 @@
         } else {
             const id = e.target.data('id');
             const desc = $cyStore.nodes(`#${id}`).data('description');
-            if (desc) {
+            if (desc && desc !== '') {
                 description = desc;
-                nodeId = null;
+                // nodeId = null;
+                nodeId = id;
             } else {
                 nodeId = id;
-                description = null;
+                description = '';
             }
         }
     }
@@ -137,7 +138,7 @@
     {#if currentOperation === 'inspect'}
         <h1 class="text-md font-bold">Inspect Structs</h1>
         <div class="flex flex-col space-y-2">
-            <NodeDescription {nodeId} {description} />
+            <NodeDescription data={{nodeId, description}} />
         </div>
     {/if}
 </div>

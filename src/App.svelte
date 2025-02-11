@@ -10,8 +10,8 @@
 
     <div slot="sidebar" class="flex flex-col space-y-4">
       {#if $elements.length > 0} 
-        <h1 class="text-md font-bold">Load another file</h1>
-        <Dropzone />
+        <!-- <h1 class="text-md font-bold">Load another file</h1> -->
+        <!-- <Dropzone /> -->
         <GraphOptions />  
       {:else}
         <h3 class="text-md font-light font-italic mx-auto">
